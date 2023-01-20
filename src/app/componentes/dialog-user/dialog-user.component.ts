@@ -29,6 +29,8 @@ export class DialogUserComponent {
     if(this.formPreguntas.valid){
       this.datausuario.Usuario.push({nombre:this.data.usuario, color:this.formPreguntas.get('color')?.value, animalito:this.formPreguntas.get('animalito')?.value})
     }
-    
+  }
+  validacion(name: string) {
+    return this.formPreguntas.get(name)?.errors && this.formPreguntas.get(name)?.touched
   }
 }

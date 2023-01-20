@@ -30,4 +30,7 @@ export class UserComponent {
     })
     this.formnombre.reset();
   }
+  validacion(name: string) {
+    return this.formnombre.get(name)?.errors && this.formnombre.get(name)?.touched
+  }
 }
