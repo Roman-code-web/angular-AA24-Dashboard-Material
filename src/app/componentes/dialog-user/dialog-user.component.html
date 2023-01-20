@@ -1,0 +1,32 @@
+<div class="container">
+    <!---titulo--->
+    <h1 mat-dialog-title class="text-center fs-4 py-3"> Hola {{data.usuario}}</h1>
+    <!---content--->
+    <div mat-dialog-content class="pb-0 mb-0">
+        <form [formGroup]="formPreguntas">
+            <!------color-------->
+            <div class="mb-3">
+                <p class="text-dark">Cual es tu color favorito?</p>
+            </div>
+            <div class="">
+                <mat-form-field class="w-100">
+                    <mat-label>Color</mat-label>
+                    <input matInput name="color" formControlName="color">
+                </mat-form-field>
+            </div>
+            <!------animalito-------->
+            <div class="mb-3">
+                <p class="text-dark">Cual es tu animalito favorito?</p>
+            </div>
+            <mat-form-field class="w-100">
+                <mat-label>Animalito</mat-label>
+                <input matInput name="Musica" formControlName="animalito">
+            </mat-form-field>
+        </form>    
+    </div>
+    <!------Botones-------->
+    <div mat-dialog-actions class="container d-flex gap-4 justify-content-center mb-3">
+        <button mat-button mat-dialog-close="true" [disabled]="formPreguntas.invalid" cdkFocusInitial mat-raised-button color="accent" (click)="guardarRespuestas()" >Guardar</button>
+        <button mat-button mat-dialog-close="true" >Cerrar</button>
+    </div>
+</div>

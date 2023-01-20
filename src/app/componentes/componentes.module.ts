@@ -8,12 +8,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { DialogUserComponent } from './dialog-user/dialog-user.component';
+import { MaterialModule } from '../material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    NavigationComponent
+    NavigationComponent,
+    DialogUserComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +27,9 @@ import { RouterModule, RouterOutlet } from '@angular/router';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    MaterialModule,
+    ReactiveFormsModule
   ], exports:[
     NavigationComponent
   ]

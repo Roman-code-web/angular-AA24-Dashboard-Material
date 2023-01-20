@@ -8,6 +8,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { UserComponent } from './user/user.component';
+import { MaterialModule } from '../material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DialogUserComponent } from '../componentes/dialog-user/dialog-user.component';
 
 
 
@@ -23,10 +26,15 @@ import { UserComponent } from './user/user.component';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    MaterialModule, //modulo material
+    ReactiveFormsModule
   ],exports:[
     HomeDashboardComponent,
     UserComponent
+  ],
+  entryComponents:[ //4.
+    DialogUserComponent
   ]
 })
 export class PagesModule { }
